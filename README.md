@@ -83,7 +83,7 @@ The file loader also spits out logo.png into some local folder you specify, like
   Webpack builds a new Javascript file, replacing require() calls with valid Javascript code, such as URLs. 
   The bundled file is what's executed by Node or the browser.
 
-# What About Browserify, Grunt, Gulp…?
+# What About Browserify, Grunt, Gulp?
 
 Webpack puts your static assets (and source code) in a true dependency graph. Grunt and Gulp are only tools 
 for working with files, and have no concept of a depdency graph.
@@ -131,7 +131,7 @@ Webpack isn't perfect and has some pitfalls.
 
 	•	Webpack is maintained mostly by one person. The rapid community adoption and the thrust into the 
 	spotlight means the ecosystem lags far behind the maturity of React. This has side effects, such as the poor quality of the documentation.
-	
+
 	•	Webpack introduces a nasty mini language in a 
 	string:require("!style!css!less!bootstrap/less/bootstrap.less"); This syntax is almost never used, and barely explained, but it's all over the documentation. This string language is one of of Webpack's biggest design flaws in my opinion.
 
