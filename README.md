@@ -105,7 +105,7 @@ Static assets in a dependency graph offers many benefits. Here's a few:
 	•	You control how assets are processed. If an image is below a certain size, you could base64 
 	encode it directly into your Javascript for fewer HTTP requests. If a JSON file is too big, you can
 	 load it from a URL. You can require('./style.less') and it's automaticaly parsed by Less into vanilla CSS.
-	 
+
 	•	Stable production deploys. You can't accidentally deploy code with images missing, or outdated styles.
 
 	•	Webpack will slow you down at the start, but give you great speed benefits when used correctly. 
@@ -122,13 +122,16 @@ Webpack isn't perfect and has some pitfalls.
 	 takes modules with dependencies and generates static assets representing those modules." What? Even the 
 	 page layout is problematic, with random sidebar entries you can't click on, and animated logos while 
 	 you're trying to read.
+
 	•	The source code is similarly painful.
+
 	•	Configuring Webpack is a minefield for newcomers. The configuration file syntax is confusing. 
 	It's best to look at established examples from any boilerplate project. Also check out the 
-	new webpack-validator
-	 library.
+	new webpack-validator library.
+
 	•	Webpack is maintained mostly by one person. The rapid community adoption and the thrust into the 
 	spotlight means the ecosystem lags far behind the maturity of React. This has side effects, such as the poor quality of the documentation.
+	
 	•	Webpack introduces a nasty mini language in a 
 	string:require("!style!css!less!bootstrap/less/bootstrap.less"); This syntax is almost never used, and barely explained, but it's all over the documentation. This string language is one of of Webpack's biggest design flaws in my opinion.
 
@@ -160,7 +163,7 @@ Still the idea of using JavaScript for build automation sounds quite reasonable,
 
 This process is run in modern JavaScript browsers. Don’t forget to  add logging and error handling functionality.
 
-The tools/build.js script  in our example will be converted to ES5 on the fly and executed by Node.js. 
+The build.js script  in our example will be converted to ES5 on the fly and executed by Node.js. 
 No need to have any global dependencies installed to make it work (other than Node.js and npm).
 */
 
