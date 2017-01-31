@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "babel": "^5.8.23"
+  },
+  "scripts": {
+    "build": "babel-node tools/run build"
+  }
+}
