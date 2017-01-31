@@ -145,9 +145,10 @@ For large projects, Webpack isn't worth using without the dev server.
 
 # Stop Programming With Globals
 
-Traditional Front End™ programming relies mainly on global variables. CSS rules all exist in a global namespace. 
+Traditional Front End programming relies mainly on global variables. CSS rules all exist in a global namespace. 
 Applying CSS rules to elements relies on manually lining up the contents of global strings (selectors) correctly. 
-A hard coded image path is a global, and you can't statically analyze your codebase to find outdated, moved, or deleted images. Using a custom font in your CSS means you globally defined that font file somewhere, and you better hope you loaded it at the right time!
+A hard coded image path is a global, and you can't statically analyze your codebase to find outdated, moved, or deleted images. Using a custom font in your CSS means you globally defined that font file somewhere, and you better hope you loaded it at the right time! Not very good though!
+
 Stop being a human compiler. Use a dependency graph.
 
 # Using Vanilla JavaScript 
