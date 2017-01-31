@@ -1,4 +1,4 @@
-# webpack - How the Dependency Graph works
+# Webpack - How the Dependency Graph works
 
 
 Webpack is a Module bundler. It bundles a bunch of modules with require statements
@@ -63,7 +63,6 @@ into a "bundled" file that the browser can execute properly.
 What Does Webpack Actually Do?
 Webpack lets you use require() on local "static assets," meaning non-code files.
 
-<img src={ require('../../assets/logo.png') } />  
 
 Wait, you can't require() images in Javascript! What's going on? When you run Webpack, it searches through all of your code for require() calls. It compares the path string ../../assets/logo.png to the "loader" configuration you specify.
 
@@ -98,13 +97,17 @@ Browserify is mainly a tool to transform require() calls that work in Node.js in
 Static assets in a dependency graph offers many benefits. Here's a few:
 	•	Dead asset elimination. This is killer, especially for CSS rules. You only build 
 	the images and CSS into your dist/ folder that your application actually needs.
+
 	•	Easier code splitting. For example, because you know that your file Homepage.js only
-	 requires specific CSS files, Webpack could easily build a homepage.css file to greatly r
-	 educe initial file size.
+	 requires specific CSS files, Webpack could easily build a homepage.css file to greatly 
+	 reduce initial file size.
+
 	•	You control how assets are processed. If an image is below a certain size, you could base64 
 	encode it directly into your Javascript for fewer HTTP requests. If a JSON file is too big, you can
 	 load it from a URL. You can require('./style.less') and it's automaticaly parsed by Less into vanilla CSS.
+	 
 	•	Stable production deploys. You can't accidentally deploy code with images missing, or outdated styles.
+
 	•	Webpack will slow you down at the start, but give you great speed benefits when used correctly. 
 	You get hot page reloading. True CSS management. CDN cache busting because Webpack automatically 
 	changes file names to hashes of the file contents, etc.
