@@ -14,7 +14,7 @@ like images, and decide how they're processed in your final Javascript bundle, l
 with a URL pointing to a CDN.
 
 
-# When to use  Webpack.
+# When to use  Webpack
 
 If you're building a complex Front End application with many non-code static assets
  such as CSS, images, fonts, etc, then yes, Webpack will give you great benefits.
